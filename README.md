@@ -48,4 +48,29 @@ If you have any programming knowlegde at all, I do advise you looking over the c
 - Array object print out.
 
 ## How it works
+The fandom page for quests typically lists the dialogue for all quests (typically, I'm not 100% if its every time.
 
+They use a div with a class of `diabox` to list when dialogue starts.
+```html 
+<div class="diabox">
+  
+</div>
+```
+
+Within this, it brances between 3 nodes. 
+
+```html
+<b>This is the players option!</b>
+```
+
+```html
+<i>This is what the NPC will say</i>  
+```
+
+```html
+<dl>This is the start for a dialogue list. Basically, when the player has multiple dialogue options. It will have a <b> within it</dl>
+```
+
+```html
+<dd>This is the final node which stands for dialogue...dialogue? I'm not sure but this is basically the option and its reply. 
+```
