@@ -7,7 +7,12 @@ Instead of manually doing it (I got board after 8 lines!)
 
 This tool is pasted into the console window of your browser while on the fandom page and it runs.
 
+## Example
+
+![2023-03-06_19-30-04](https://user-images.githubusercontent.com/48034534/223213043-55fd4027-4445-448f-bdc0-07e399f6dc46.gif)
+
 ## 🧐 Features
+
 
 - Easy to modify (its only 79 lines)
 - Customisable output with 1 line modification
