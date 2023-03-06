@@ -57,7 +57,7 @@ They use a div with a class of `diabox` to list when dialogue starts.
 </div>
 ```
 
-Within this, it brances between 3 nodes. 
+Within this, it brances between 4 nodes. 
 
 ```html
 <b>This is the players option!</b>
