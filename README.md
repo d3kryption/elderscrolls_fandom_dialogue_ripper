@@ -16,7 +16,6 @@ This tool is pasted into the console window of your browser while on the fandom 
 
 - Easy to modify (its only 79 lines)
 - Customisable output with 1 line modification
-- Will try to get the NPC's name when running through
 
 ## Limitations
 
