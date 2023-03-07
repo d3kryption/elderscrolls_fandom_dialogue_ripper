@@ -5,26 +5,27 @@ lines = []
 diaboxes.forEach(function(e, i){
   npcName = "NPC";
   
-  // get the previous sibling - it might have a link to the NPC
-  npcSpeaker = e.previousSibling.previousSibling;
+  // push first dialogue i if it exists
+  children = e.children;
   
-  if (npcSpeaker) {
-    	// does it have an a tag - its normally the NPC
-    	aTag = npcSpeaker.querySelector("a");
+  for (let i = 0; i < children.length; i++) {
+    let child = children[i],
+    		tagName = child.tagName;
     
-      if (aTag) {
-        npcName = aTag.title;
-      }
-  }
-  
-  // push first dialogue i
-  PushLine(npcName, e.querySelector("i").innerText);
-  
-  // does the current dialogue have any lines
-  subLines = e.querySelector("dl")
-  
-  if (subLines) {
- 		GetLines(subLines, npcName)
+  	// push first dialogue i if it exists
+    if (tagName === "I") {
+    	PushLine(npcName, child.innerText);
+    }
+    
+    // push line if B exists
+    else if (tagName === "B") {
+    	PushLine(npcName, child.innerText);
+    }
+    
+    // push line if DL exists
+    else if (tagName === "DL") {
+    	GetLines(child, npcName)
+    }
   }
 });
 
@@ -55,10 +56,12 @@ function GetLines(dl, npcName) {
 
 // add to the line array
 function PushLine(character, line) {
-  lines.push({
+  newLine = {
     Character: character,
     Line: line.replace(/"/g, '') // remove speechmarks
-  });
+  }
+  
+  lines.push(newLine);
 }
 
 // combine all the lines into pipe seperated
