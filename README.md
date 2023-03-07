@@ -14,7 +14,7 @@ This tool is pasted into the console window of your browser while on the fandom 
 ## 🧐 Features
 
 
-- Easy to modify (its only 79 lines)
+- Easy to modify (its only 54 lines)
 - Customisable output with 1 line modification
 
 ## Limitations
@@ -79,4 +79,4 @@ Within this, it brances between 4 nodes.
 <dd>This is the final node which stands for dialogue...dialogue? I'm not sure but this is basically the option and its reply. 
 ```
 
-Using the abbove, the code will first find all dialogue options via the `diabox` class, then loop through it. If it finds a `<b>` for the player option then it'll log it as a line with the name of `Player`. If it finds a `<i>` it'll log it as an NPC line. before it logs it, it'll try to go back up the chain and search the `<p>` to hopefully find the name of the NPC. If it finds a `<dl>` then it will restart the search process. Finally, it exports it.
+Using the abbove, the code will first find all dialogue options via the `diabox` class, then finds all instances of `<b>` or `<i>`. If it finds a `<b>` for the player option then it'll log it as a line with the name of `Player`. If it finds a `<i>` it'll log it as an NPC line. Finally, it exports it.
